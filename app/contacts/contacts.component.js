@@ -9,23 +9,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var platform_browser_1 = require('@angular/platform-browser');
-var app_component_1 = require('./app.component');
-var home_component_1 = require('./home/home.component');
-var contacts_component_1 = require('./contacts/contacts.component');
-var app_routes_1 = require("./app.routes");
-var AppModule = (function () {
-    function AppModule() {
+var ContactsComponent = (function () {
+    function ContactsComponent() {
     }
-    AppModule = __decorate([
-        core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, app_routes_1.default],
-            declarations: [app_component_1.AppComponent, home_component_1.HomeComponent, contacts_component_1.ContactsComponent],
-            bootstrap: [app_component_1.AppComponent]
+    ContactsComponent = __decorate([
+        core_1.Component({
+            template: "\n        This is a contacts component\n    "
         }), 
         __metadata('design:paramtypes', [])
-    ], AppModule);
-    return AppModule;
+    ], ContactsComponent);
+    return ContactsComponent;
 }());
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+exports.ContactsComponent = ContactsComponent;
+//# sourceMappingURL=contacts.component.js.map
