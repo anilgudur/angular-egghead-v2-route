@@ -9,16 +9,28 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var HomeComponent = (function () {
-    function HomeComponent() {
+var common_1 = require('@angular/common');
+//import { RouterModule } from '@angular/router';
+var home_component_1 = require('./home.component');
+var home_routes_1 = require("./home.routes");
+// const routes = [
+//     {path:'', component: HomeComponent}
+// ];
+var HomeModule = (function () {
+    function HomeModule() {
     }
-    HomeComponent = __decorate([
-        core_1.Component({
-            template: "\n    I'm a home componentss\n  "
+    HomeModule = __decorate([
+        core_1.NgModule({
+            //imports: [CommonModule, RouterModule.forChild(routes) ],
+            imports: [common_1.CommonModule, home_routes_1.default],
+            exports: [],
+            declarations: [home_component_1.HomeComponent],
+            providers: [],
         }), 
         __metadata('design:paramtypes', [])
-    ], HomeComponent);
-    return HomeComponent;
+    ], HomeModule);
+    return HomeModule;
 }());
-exports.HomeComponent = HomeComponent;
-//# sourceMappingURL=home.component.js.map
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = HomeModule;
+//# sourceMappingURL=home.module.js.map
