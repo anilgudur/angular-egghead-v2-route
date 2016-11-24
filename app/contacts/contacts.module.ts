@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 //import { RouterModule } from '@angular/router';
 import { ContactsComponent }   from './contacts.component';
+import { ContactComponent }   from './contact.component';
 
 import contactsRoutes from "./contacts.routes";
 
@@ -14,7 +15,7 @@ import contactsRoutes from "./contacts.routes";
     //imports: [CommonModule, RouterModule.forChild(routes) ],
     imports: [CommonModule, contactsRoutes ],
     exports: [],
-    declarations: [ContactsComponent],
+    declarations: [ContactsComponent, ContactComponent],
     providers: [],
 })
 export default class ContactsModule { }

@@ -12,6 +12,7 @@ var core_1 = require('@angular/core');
 var common_1 = require('@angular/common');
 //import { RouterModule } from '@angular/router';
 var contacts_component_1 = require('./contacts.component');
+var contact_component_1 = require('./contact.component');
 var contacts_routes_1 = require("./contacts.routes");
 // const routes = [
 //     {path:'', component: ContactsComponent}
@@ -24,7 +25,7 @@ var ContactsModule = (function () {
             //imports: [CommonModule, RouterModule.forChild(routes) ],
             imports: [common_1.CommonModule, contacts_routes_1.default],
             exports: [],
-            declarations: [contacts_component_1.ContactsComponent],
+            declarations: [contacts_component_1.ContactsComponent, contact_component_1.ContactComponent],
             providers: [],
         }), 
         __metadata('design:paramtypes', [])
