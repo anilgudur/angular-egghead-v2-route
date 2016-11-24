@@ -15,7 +15,8 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n  <nav>\n    <a routerLink=\"\">Home</a>\n    <a routerLink=\"contacts\">Contacts</a>\n  </nav>\n  <router-outlet></router-outlet>\n  "
+            styles: ["\n    a{\n      text-decoration:none;\n    }\n    a.active{\n      font-weight:bold;\n    }\n  "],
+            template: "\n  <nav>\n    <a routerLink=\"\" routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{exact:true}\">Home</a>\n    <a routerLink=\"contacts\" routerLinkActive=\"active\">Contacts</a>\n  </nav>\n  <router-outlet></router-outlet>\n  "
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
