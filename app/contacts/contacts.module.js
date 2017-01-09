@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var common_1 = require('@angular/common');
+var http_1 = require('@angular/http');
 //import { RouterModule } from '@angular/router';
 var contacts_component_1 = require('./contacts.component');
 var contact_component_1 = require('./contact.component');
@@ -23,7 +24,7 @@ var ContactsModule = (function () {
     ContactsModule = __decorate([
         core_1.NgModule({
             //imports: [CommonModule, RouterModule.forChild(routes) ],
-            imports: [common_1.CommonModule, contacts_routes_1.default],
+            imports: [common_1.CommonModule, contacts_routes_1.default, http_1.HttpModule],
             exports: [],
             declarations: [contacts_component_1.ContactsComponent, contact_component_1.ContactComponent],
             providers: [],

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpModule } from '@angular/http';
 
 //import { RouterModule } from '@angular/router';
 import { ContactsComponent }   from './contacts.component';
@@ -13,7 +14,7 @@ import contactsRoutes from "./contacts.routes";
 
 @NgModule({
     //imports: [CommonModule, RouterModule.forChild(routes) ],
-    imports: [CommonModule, contactsRoutes ],
+    imports: [CommonModule, contactsRoutes, HttpModule ],
     exports: [],
     declarations: [ContactsComponent, ContactComponent],
     providers: [],

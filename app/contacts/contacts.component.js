@@ -9,14 +9,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var http_1 = require('@angular/http');
+require("rxjs/add/operator/map");
 var ContactsComponent = (function () {
-    function ContactsComponent() {
+    function ContactsComponent(http) {
+        this.http = http;
+        this.contacts$ = http.get('https://starwars-json-server-ewtdxbyfdz.now.sh/people')
+            .map(function (res) { return res.json(); });
     }
     ContactsComponent = __decorate([
         core_1.Component({
-            template: "\n        This is a contacts component\n    "
+            template: "\n        <div *ngFor=\"let contact of contacts$ | async\"> \n            <!-- <a [routerLink]=\"['/contacts', contact.id]\"> -->\n            <a [routerLink]=\"contact.id\">\n                {{contact.name}}\n            </a>\n        </div>\n    "
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [http_1.Http])
     ], ContactsComponent);
     return ContactsComponent;
 }());
