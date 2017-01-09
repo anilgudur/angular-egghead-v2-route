@@ -11,12 +11,17 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var AppComponent = (function () {
     function AppComponent() {
+        this.navs = [
+            { url: "", content: "Home" },
+            { url: "contacts", content: "Contacts" },
+            { url: "contacts/1", content: "One" }
+        ];
     }
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
             styles: ["\n    a{\n      text-decoration:none;\n    }\n    a.active{\n      font-weight:bold;\n    }\n  "],
-            template: "\n  <nav>\n    <a routerLink=\"\" routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{exact:true}\">Home</a>\n    <a routerLink=\"contacts\" routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{exact:true}\">Contacts</a>\n    <a routerLink=\"contacts/1\" routerLinkActive=\"active\">Contact One</a>\n  </nav>\n  <router-outlet></router-outlet>\n  "
+            template: "\n  <nav>\n    <a *ngFor=\"let nav of navs\" [routerLink]=\"nav.url\" routerLinkActive=\"active\" [routerLinkActiveOptions]=\"{exact:true}\">{{nav.content}} </a>\n  </nav>\n  <router-outlet></router-outlet>\n  "
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
