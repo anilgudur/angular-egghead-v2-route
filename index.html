@@ -1,9 +1,13 @@
 <html>
   <head>
-    <base href="/">
+    
     <title>Angular QuickStart</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+      var path = document.location.href.includes('plnkr') ? './' : '/';
+      document.write('<base href="' + path + '">');
+    </script>
     <link rel="stylesheet" href="styles.css">
     <!-- 1. Load libraries -->
      <!-- Polyfill(s) for older browsers -->
