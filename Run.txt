@@ -1,1 +1,17 @@
 npm start
+
+
+--------------------
+Useful while commit / add tag
+
+git tag -a v2-route-step-09 ec576f8 -m "09-egghead-angular-2-load-data-to-build-angular-2-navigation"
+
+git push --tags origin master
+
+-----
+
+git checkout -f aefe775
+
+git tag -d v2-route-step-06
+
+--------------------
